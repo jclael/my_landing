@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Style.css">
+    <script src="https://kit.fontawesome.com/6427a83ee5.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <div id="header">
+        <div class="container">
+          <nav>
+            <div><a href="#header"><h1>Landing Page</h1></a></div>
+            <ul id="sidemenu">
+              <li><a href="#header">Home</a></li>
+              <li><a href="#about">About Me</a></li>
+              <li><a href="#myproject">My Project</a></li>
+              <li><a href="#contact">Contact Me</a></li>
+              <i class="fa-solid fa-circle-xmark" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+          </nav>
+          <div class="header-text">
+              <h1>Hi, I'm Jose Carlos Leal
+                <br><span>Student Developer</span></h1>
+              <p>This is my Landing Page</p>
+          </div>
+        </div>
+    </div>
+
+
+      <div id="about">
+          <div class="container">
+              <div class="row">
+                <div class="about-col-1">
+                    <img src="1x1.jpg">
+                   </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I'm Jose Carlos H. Leal a 2nd Year Student in Pamantasan ng Lungsod ng San Pablo Taking a Bachelor of Science 
+                      in Information Technology Major in Web Development and Game,
+                    </p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+
+                    <div class="tab-contents active-tab" id="skills">
+                      <ul>
+                          <li><span>Developer</span><br>Designing Web Interfaces </li>
+                          <li><span>Software Engineer</span><br>Designing a computer System and System applications</li>
+                          <li><span>With knowledge in computer programming
+                          </span><br>(Visual Basic, C++, Java) </li>
+                          <li><span>With knowledge in Web Designing and Web Developement
+                          </span><br>(HTML, CSS) </li>
+                          <li><span>Proficient in Microsoft Office
+                          </span><br>(Ms Word, Excel, Powerpoint, Etc) </li>
+                      </ul>
+                    </div>
+
+                    <div class="tab-contents" id="experience">
+                      <ul>
+                          <li><span>2021-2022 Helper Contructor
+
+                          </span><br>Hi-p </li>
+                          
+                          
+                      </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                      <ul>
+                          <li><span>2020 to present</span><br> Pamantasan ng Lungsod ng San Pablo<br>San Pablo City </li>
+                          <li><span>2019-2021 Senior High School</span><br>Tanauan Institute<br>Tanauan City, Batangas </li>
+                          <li><span>2016-2019 High School</span><br>San Pedro National High School<br>San Pedro Sto.tomas City Batangas </li>
+                          <li><span>2008-2016 Elementary</span><br>San Pablo Elementary School<br>San Pablo Sto.tomas City Batangas </li>
+                          
+                      </ul>
+                    </div>
+                </div>
+              </div>
+          </div>
+      </div>
+
+      <div id="myproject">
+          <div class="container">
+              <h1 class="sub-title">My Project</h1>
+              <div class="myproject-list">
+                  <div>
+                      <i class="fa-solid fa-hospital"></i>
+                      <h2>Website Barangay Health Center <br>Information System</h2>
+                      <p>Comming Soon</p>
+                      <a href="file:///C:/Users/JC%20Leal/Desktop/Carlos/program/index.html">Click to See Project</a>
+                  </div>
+                  <div>
+                    <i class="fa-solid fa-truck"></i>
+                    <h2>Odering Website</h2>
+                    <p>Comming Soon</p>
+                    <a href="#">Click to See Project</a>
+                </div>
+                <div>
+                  <i class="fa-regular fa-moped"></i>
+                  <h2>Online appointment</h2>
+                  <p>Comming Soon</p>
+                  <a href="#">Click to See Project</a>
+              </div>
+              </div>
+          </div>
+      </div>
+
+      <div id="contact">
+            <div class="container">
+                  <div class="row">
+                      <div class="contact-left">
+                          <h1 class="sub-title">Contact Me</h1>
+                          <p><i class="fa-solid fa-paper-plane"></i>Example@gmail.com</p>
+                          <p><i class="fa-solid fa-phone"></i>012312312312</p>
+                          <div class="social-icons">
+                              <a href=""><i class="fa-brands fa-facebook"></i></a>
+                              <a href=""><i class="fa-brands fa-twitter"></i></i></a>
+                              <a href=""><i class="fa-brands fa-instagram"></i></a>
+                              <a href=""><i class="fa-brands fa-linkedin"></i></a>
+                          </div>
+                          <a href=""  download class="btn btn2">Download CV</a>
+                      </div>
+                      <div class="contact-right">
+                          <form>
+                              <input type="text" name="Name" placeholder="Your Name" required>
+                              <input type="email" name="email" placeholder="Your Email" required>
+                              <textarea name="message" rows="6" placeholder="Your Message"></textarea>
+                              <button type="submit" class="btn btn2">Submit</button>
+                          </form>
+                      </div>
+                  </div>
+            </div>
+        
+      </div>
+
+
+      <script>
+          var tablinks = document.getElementsByClassName("tab-links");
+          var tabcontents= document.getElementsByClassName("tab-contents");
+
+          function opentab(tabname){
+              for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+              }
+              for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+              }
+              event.currentTarget.classList.add("active-link");
+              document.getElementById(tabname).classList.add("active-tab");
+          }
+
+      </script>
+
+      <script>
+
+        var sidemeu = document.getElementById("sidemenu");
+
+        function openmenu(){
+          sidemeu.style.right = "0";
+        }
+
+        function closemenu(){
+          sidemeu.style.right ="-200px";
+        }
+        </script>
+  </body>
+</html>
